@@ -5,3 +5,10 @@ input {
 label {
     display: block;
 }
+.sendButton {
+    display: block;
+    width: 200px;
+    height: 200px;
+    border: 2px solid red;
+    border-radius: 5px;
+}
