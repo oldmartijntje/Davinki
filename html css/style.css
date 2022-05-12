@@ -3,25 +3,9 @@ h2 {
     font-size: 65px;
     color: red;
 }
-a {
-    text-align: center;
-    font-size: 25px;
-    color: rgb(255, 0, 208);
+input {
+    display: block;
 }
-body {
-    background-color: rgb(35, 152, 6);
-}
-img {
-    height: 20000px;
-    width: 50%;
-    background-color: rgb(230, 176, 215);
-}
-div {
-    border: 5px outset rgb(255, 242, 0);
-    background-color: rgb(83, 0, 238);
-    text-align: center;
-}
-span {
-    font-size: 25px;
-    color: rgb(0, 255, 208);
+label {
+    display: block;
 }
