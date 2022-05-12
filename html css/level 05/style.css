@@ -18,3 +18,7 @@ article {
 header {
     border-bottom: double;
 }
+.navigation {
+    text-align: center;
+    background-color: rgb(45, 119, 176);
+}

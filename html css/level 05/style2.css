@@ -1,0 +1,45 @@
+h2 {
+    text-align: center;
+    font-size: 65px;
+    color: red;
+}
+a {
+    text-align: center;
+    font-size: 25px;
+    color: rgb(255, 0, 208);
+}
+body {
+    background-color: rgb(35, 152, 6);
+}
+img {
+    height: 20000px;
+    width: 50%;
+    background-color: rgb(230, 176, 215);
+}
+div {
+    background-color: rgb(83, 0, 238);
+    text-align: center;
+}
+span {
+    font-size: 25px;
+    color: rgb(0, 255, 208);
+}
+input {
+    display: block;
+}
+label {
+    display: block;
+}
+li {
+    display: inline;
+}
+article {
+    background-color: rgb(83, 0, 238);
+}
+header {
+    border-bottom: double;
+}
+.navigation {
+    text-align: center;
+    background-color: rgb(45, 119, 176);
+}
