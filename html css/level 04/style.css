@@ -17,11 +17,25 @@ img {
     background-color: rgb(230, 176, 215);
 }
 div {
-    border: 5px outset rgb(255, 242, 0);
     background-color: rgb(83, 0, 238);
     text-align: center;
 }
 span {
     font-size: 25px;
     color: rgb(0, 255, 208);
+}
+input {
+    display: block;
+}
+label {
+    display: block;
+}
+li {
+    display: inline;
+}
+article {
+    background-color: rgb(83, 0, 238);
+}
+header {
+    border-bottom: double;
 }

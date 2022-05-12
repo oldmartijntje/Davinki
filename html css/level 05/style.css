@@ -1,4 +1,4 @@
-h1 {
+h2 {
     text-align: center;
     font-size: 65px;
     color: red;
@@ -14,4 +14,7 @@ li {
 }
 article {
     background-color: rgb(83, 0, 238);
+}
+header {
+    border-bottom: double;
 }
