@@ -43,3 +43,10 @@ header {
     text-align: center;
     background-color: rgb(45, 119, 176);
 }
+footer {
+    text-align: center;
+    background-color: rgb(45, 119, 176);
+}
+ul {
+    color: rgb(0, 255, 208);
+}
