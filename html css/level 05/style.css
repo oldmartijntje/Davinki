@@ -1,0 +1,17 @@
+h1 {
+    text-align: center;
+    font-size: 65px;
+    color: red;
+}
+input {
+    display: block;
+}
+label {
+    display: block;
+}
+li {
+    display: inline;
+}
+article {
+    background-color: rgb(83, 0, 238);
+}
