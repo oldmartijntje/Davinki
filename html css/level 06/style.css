@@ -1,8 +1,24 @@
-
 .sendButton {
     display: block;
     width: 200px;
     height: 200px;
     border: 2px solid red;
     border-radius: 5px;
+}
+textarea {
+    border-style: ridge;
+    border-color: rgb(4, 242, 151);
+    width: 250px;
+    height: 250px;
+    border: 20px solid rgb(7, 126, 237);
+    border-style: outset;
+    transition: ease-in-out, width .35s ease-in-out;
+}
+textarea:focus {
+    border-style: groove;
+    border: 20px solid rgb(255, 0, 170);
+    transition: ease-in-out, height .35s ease-in-out;
+    border-style: outset;
+    width: 500px;
+    height: 100px;
 }
