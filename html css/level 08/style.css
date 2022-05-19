@@ -1,14 +1,32 @@
-table {
-    font-family: arial, sans-serif;
-    border-collapse: collapse;
-    width: 100%;
-}
-td, th {
+
+.grey {
     border: 1px solid #dddddd;
     text-align: left;
     padding: 8px;
+    background-color: rgb(92, 89, 87);
 }
-  
-tr:nth-child(even) {
-    background-color: #dddddd;
-}
+.red {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+  background-color: coral;
+}  
+.pink {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+  background-color: rgb(255, 80, 165);
+}  
+.blue {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+  background-color: rgb(30, 0, 255);
+}  
+.yellow {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+  background-color: rgb(255, 247, 0);
+}  
+
