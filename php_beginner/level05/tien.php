@@ -1,6 +1,6 @@
 <?php
 
-for ($x = 1; $x <= 10; $x++) {
+for ($x = 10; $x >= 1; $x--) {
     echo $x . PHP_EOL;
 }
 
