@@ -1,0 +1,29 @@
+body {
+    display: flex;
+    flex: 3;
+    align-items: center;
+
+}
+
+.interwebs {
+    flex: 3;
+}
+
+.henk {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.yeet {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.reclame {
+    background-color: red;
+    flex-direction: row;
+    flex: 1;
+}
