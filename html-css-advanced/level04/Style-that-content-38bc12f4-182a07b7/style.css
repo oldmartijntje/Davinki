@@ -1,0 +1,32 @@
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: darkorange;
+}
+
+
+
+.content {
+
+    background-color: rgb(241, 184, 114);
+
+}
+
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.content>* {
+    flex: 1 1 300px;
+}
+
+.content>*:first-child {
+    flex: 1 1 3000px;
+}
+
+h1 {
+    text-align: center;
+}
