@@ -19,6 +19,11 @@
     flex-wrap: wrap;
 }
 
+.content>* {
+    flex: 1 1 300px;
+    order: 3;
+}
+
 .content>*:first-child {
     flex: 1 1 3000px;
     order: 2;
@@ -26,21 +31,4 @@
 
 h1 {
     text-align: center;
-}
-.content>* {
-    flex: 1 1 300px;
-    order: 3;
-}
-
-[id=breaking] {
-    order: 1;
-    text-align: center;
-}
-
-[id=breaking]>h3 {
-    font-size: 30px;
-}
-
-[id=breaking]>p {
-    font-size: 20px;
 }
