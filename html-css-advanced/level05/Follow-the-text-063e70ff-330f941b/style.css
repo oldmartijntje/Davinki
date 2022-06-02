@@ -1,0 +1,23 @@
+body {
+    background-color: grey;
+}
+
+.tooltip-content {
+    background-color: rgb(0, 0, 0);
+    color: azure;
+    width: 400px;
+    display: none;
+
+}
+
+
+.icon:hover+.tooltip-content {
+    z-index: 1;
+    display: block;
+}
+
+.tooltip {
+    position: sticky;
+    top: 0;
+
+}
