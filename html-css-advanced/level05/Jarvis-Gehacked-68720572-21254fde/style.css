@@ -1,0 +1,94 @@
+.top {
+    background-color: blue;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.navigation {
+    display: flex;
+    flex-direction: row;
+}
+
+.info {
+    display: flex;
+    flex-direction: row;
+}
+
+.logo {
+    height: 10%;
+    width: 10%;
+}
+
+img {
+    height: 50px;
+    width: 50px;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+}
+
+.navtext {
+    font-size: 110%;
+    color: white;
+}
+
+.Yes {
+    background-color: rgb(255, 255, 255);
+    color: black;
+}
+
+.Yes>.navtext {
+    color: black;
+}
+
+.level {
+    background-color: aqua;
+}
+
+[greydiv="yes"]>div {
+    background-color: darkgray;
+    margin: 50px;
+}
+
+[greydiv="yes"] {
+    display: flex;
+    flex-direction: column;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td,
+th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+input {
+    background-color: aquamarine;
+}
+
+.padding {
+    padding: 10px
+}
+
+.lorem {
+    max-width: 250px;
+    max-height: 250px;
+}
+
+.normal {
+    height: 40%;
+    width: 100%;
+}
