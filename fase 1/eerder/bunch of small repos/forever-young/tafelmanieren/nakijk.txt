@@ -1,0 +1,79 @@
+Naam van de opdracht     : Tafelmanieren
+
+Datum            : 09/21
+
+Opdracht van        : martijn
+
+Nagekeken door    :thomas
+
+ 
+
+ 
+
+Planning 
+
+Is er een planning gemaakt (op Trelle)       ja               : ja / nee 
+
+Staan er op de kaartjes uren ingeschat      nee(want in de app kan dat niet)      : ja / nee / deels 
+
+Is de planning (goed) bijgehouden    ja        : ja / nee / deels 
+
+Is er bij inleveren link naar planning aanwezig   ja     : ja / nee 
+
+ 
+
+ 
+
+Github 
+
+Is er een REPO gemaakt voor de opdracht     ja   : ja / nee 
+
+Zijn er meerdere commints aanwezig    ja        : ja / nee 
+
+Zijn er goede beschrijvingen aanwezig bij de commints  nee   : ja / nee / deels 
+
+Is er bij inleveren link naar REPO aanwezig     ja   : ja / nee 
+
+ 
+
+ 
+
+Opdracht 
+
+Voldoet de opdracht aan de gestelde technische eisen  ja  : ja / nee / deels 
+
+Voldoet de opdracht aan de gestelde functionele eisen ja   : ja / nee / deels 
+
+Is er een ZIP file ingeleverd met alle opdrachten   ja : ja / nee 
+
+ 
+
+ 
+
+Indien de opdracht naar jouw mening niet voldaan is wat moet er dan nog aangepast worden om de opdracht succesvol af te ronden? 
+
+…. 
+
+ 
+
+ 
+
+ 
+
+Wat zijn jouw TOPS: 
+
+… 
+
+… 
+
+ kaas
+
+ 
+
+ 
+
+Wat zijn jouw TIPS: 
+
+… 
+
+…

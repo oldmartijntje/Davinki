@@ -1,0 +1,62 @@
+-------------------------------------
+|Pizza  size|medium|
+| Pepperoni |small|
+|  Cheese   |large|
+| Pineapple |medium|
+|    Ham    |NONE|
+|Tomatosauce|small|
+|   Tuna    |NONE|
+-------------------------------------
+|   Price   | €6.449999999999999|
+-------------------------------------
+|Pizza  size|medium|
+| Pepperoni |small|
+|  Cheese   |large|
+| Pineapple |medium|
+|    Ham    |NONE|
+|Tomatosauce|small|
+|   Tuna    |NONE|
+-------------------------------------
+|   Price   | €6.449999999999999|
+-------------------------------------
+|Pizza  size|medium|
+| Pepperoni |small|
+|  Cheese   |large|
+| Pineapple |medium|
+|    Ham    |NONE|
+|Tomatosauce|small|
+|   Tuna    |NONE|
+-------------------------------------
+|   Price   | €6.449999999999999|
+-------------------------------------
+|Pizza  size|small|
+| Pepperoni |NONE|
+|  Cheese   |NONE|
+| Pineapple |NONE|
+|    Ham    |NONE|
+|Tomatosauce|NONE|
+|   Tuna    |NONE|
+-------------------------------------
+|   Price   | €1|
+-------------------------------------
+|Pizza  size|small|
+| Pepperoni |NONE|
+|  Cheese   |NONE|
+| Pineapple |NONE|
+|    Ham    |NONE|
+|Tomatosauce|NONE|
+|   Tuna    |NONE|
+-------------------------------------
+|   Price   | €1|
+-------------------------------------
+|Pizza  size|large|
+| Pepperoni |NONE|
+|  Cheese   |humongous|
+| Pineapple |NONE|
+|    Ham    |NONE|
+|Tomatosauce|NONE|
+|   Tuna    |NONE|
+-------------------------------------
+|   Price   | €6.5|
+-------------------------------------
+|   Total   |€27.849999999999998|

@@ -1,0 +1,71 @@
+<html>
+    <body>
+        <canvas id="canvas" width="800" height="600"></canvas>
+        <script src="./robot-arm.js"></script>
+        <script>
+            // Robotarm bibliotheek inladen
+            var canvas = document.getElementById("canvas");
+            var robotArm = new RobotArm(canvas);
+            robotArm.speed = 1000;
+            // Het level inladen
+            robotArm.loadLevel("exercise 4");
+            
+            // Jou instructies volgen hier
+            for (var i = 2; i >= 0; i--) {
+                robotArm.grab();
+                    color = robotArm.scan();
+                if (color == "blue") {
+                       robotArm.grab();
+                        robotArm.moveRight();
+                        robotArm.drop();
+                        robotArm.moveLeft(); 
+                } 
+                if (color == "green") {
+                        robotArm.grab();
+                        robotArm.moveRight();
+                        robotArm.moveRight();
+                        robotArm.moveRight();
+                        robotArm.drop();
+                        robotArm.moveLeft();
+                        robotArm.moveLeft();
+                        robotArm.moveLeft();
+                }
+                if (color == "white") {
+                        robotArm.grab();
+                        robotArm.moveRight();
+                        robotArm.moveRight();
+                        robotArm.drop();
+                        robotArm.moveLeft();
+                        robotArm.moveLeft();
+                        
+                }
+            }
+            robotArm.moveRight();
+            robotArm.moveRight();
+            for (var i = 1; i >= 0; i--) {
+                robotArm.grab();
+                    color = robotArm.scan(); 
+                if (color == "white") {
+                        robotArm.grab();
+                        robotArm.moveLeft();
+                        robotArm.drop();
+                        robotArm.moveRight();
+                        robotArm.moveRight();
+                }
+                if (color == "green") {
+                        robotArm.grab();
+                        robotArm.moveLeft();
+                        robotArm.moveLeft();
+                        robotArm.drop();
+                        
+                }
+            }   
+            
+
+            
+            
+            // De door jou opgegeven instructies uitvoeren
+            robotArm.run();
+        </script>
+    </body>
+</html>

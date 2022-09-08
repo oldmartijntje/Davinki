@@ -1,0 +1,252 @@
+-------------------------------------
+|Pizza  size|large|
+| Pepperoni |NONE|
+|  Cheese   |NONE|
+| Pineapple |NONE|
+|    Ham    |NONE|
+|Tomatosauce|NONE|
+|   Tuna    |NONE|
+-------------------------------------
+|   Price   | €2|
+-------------------------------------
+|Pizza  size|NONE|
+| Pepperoni |NONE|
+|  Cheese   |humongous|
+| Pineapple |NONE|
+|    Ham    |NONE|
+|Tomatosauce|NONE|
+|   Tuna    |NONE|
+-------------------------------------
+|   Price   | €4.5|
+-------------------------------------
+|Pizza  size|NONE|
+| Pepperoni |NONE|
+|  Cheese   |humongous|
+| Pineapple |NONE|
+|    Ham    |NONE|
+|Tomatosauce|NONE|
+|   Tuna    |NONE|
+-------------------------------------
+|   Price   | €4.5|
+-------------------------------------
+|Pizza  size|NONE|
+| Pepperoni |NONE|
+|  Cheese   |humongous|
+| Pineapple |NONE|
+|    Ham    |NONE|
+|Tomatosauce|NONE|
+|   Tuna    |NONE|
+-------------------------------------
+|   Price   | €4.5|
+-------------------------------------
+|Pizza  size|NONE|
+| Pepperoni |NONE|
+|  Cheese   |humongous|
+| Pineapple |NONE|
+|    Ham    |NONE|
+|Tomatosauce|NONE|
+|   Tuna    |NONE|
+-------------------------------------
+|   Price   | €4.5|
+-------------------------------------
+|Pizza  size|NONE|
+| Pepperoni |NONE|
+|  Cheese   |humongous|
+| Pineapple |NONE|
+|    Ham    |NONE|
+|Tomatosauce|NONE|
+|   Tuna    |NONE|
+-------------------------------------
+|   Price   | €4.5|
+-------------------------------------
+|Pizza  size|NONE|
+| Pepperoni |NONE|
+|  Cheese   |humongous|
+| Pineapple |NONE|
+|    Ham    |NONE|
+|Tomatosauce|NONE|
+|   Tuna    |NONE|
+-------------------------------------
+|   Price   | €4.5|
+-------------------------------------
+|Pizza  size|NONE|
+| Pepperoni |NONE|
+|  Cheese   |NONE|
+| Pineapple |NONE|
+|    Ham    |NONE|
+|Tomatosauce|NONE|
+|   Tuna    |NONE|
+-------------------------------------
+|   Price   | €0|
+-------------------------------------
+|Pizza  size|NONE|
+| Pepperoni |NONE|
+|  Cheese   |NONE|
+| Pineapple |NONE|
+|    Ham    |NONE|
+|Tomatosauce|NONE|
+|   Tuna    |NONE|
+-------------------------------------
+|   Price   | €0|
+-------------------------------------
+|Pizza  size|NONE|
+| Pepperoni |NONE|
+|  Cheese   |NONE|
+| Pineapple |NONE|
+|    Ham    |NONE|
+|Tomatosauce|NONE|
+|   Tuna    |NONE|
+-------------------------------------
+|   Price   | €0|
+-------------------------------------
+|Pizza  size|NONE|
+| Pepperoni |NONE|
+|  Cheese   |NONE|
+| Pineapple |NONE|
+|    Ham    |NONE|
+|Tomatosauce|NONE|
+|   Tuna    |NONE|
+-------------------------------------
+|   Price   | €0|
+-------------------------------------
+|Pizza  size|NONE|
+| Pepperoni |NONE|
+|  Cheese   |NONE|
+| Pineapple |NONE|
+|    Ham    |NONE|
+|Tomatosauce|NONE|
+|   Tuna    |NONE|
+-------------------------------------
+|   Price   | €0|
+-------------------------------------
+|Pizza  size|NONE|
+| Pepperoni |NONE|
+|  Cheese   |NONE|
+| Pineapple |NONE|
+|    Ham    |NONE|
+|Tomatosauce|NONE|
+|   Tuna    |NONE|
+-------------------------------------
+|   Price   | €0|
+-------------------------------------
+|Pizza  size|NONE|
+| Pepperoni |NONE|
+|  Cheese   |NONE|
+| Pineapple |NONE|
+|    Ham    |NONE|
+|Tomatosauce|NONE|
+|   Tuna    |NONE|
+-------------------------------------
+|   Price   | €0|
+-------------------------------------
+|Pizza  size|NONE|
+| Pepperoni |NONE|
+|  Cheese   |NONE|
+| Pineapple |NONE|
+|    Ham    |NONE|
+|Tomatosauce|NONE|
+|   Tuna    |NONE|
+-------------------------------------
+|   Price   | €0|
+-------------------------------------
+|Pizza  size|NONE|
+| Pepperoni |NONE|
+|  Cheese   |NONE|
+| Pineapple |NONE|
+|    Ham    |NONE|
+|Tomatosauce|NONE|
+|   Tuna    |NONE|
+-------------------------------------
+|   Price   | €0|
+-------------------------------------
+|Pizza  size|NONE|
+| Pepperoni |NONE|
+|  Cheese   |NONE|
+| Pineapple |NONE|
+|    Ham    |NONE|
+|Tomatosauce|NONE|
+|   Tuna    |NONE|
+-------------------------------------
+|   Price   | €0|
+-------------------------------------
+|Pizza  size|NONE|
+| Pepperoni |NONE|
+|  Cheese   |NONE|
+| Pineapple |NONE|
+|    Ham    |NONE|
+|Tomatosauce|NONE|
+|   Tuna    |NONE|
+-------------------------------------
+|   Price   | €0|
+-------------------------------------
+|Pizza  size|NONE|
+| Pepperoni |NONE|
+|  Cheese   |NONE|
+| Pineapple |NONE|
+|    Ham    |NONE|
+|Tomatosauce|NONE|
+|   Tuna    |NONE|
+-------------------------------------
+|   Price   | €0|
+-------------------------------------
+|Pizza  size|NONE|
+| Pepperoni |NONE|
+|  Cheese   |NONE|
+| Pineapple |NONE|
+|    Ham    |NONE|
+|Tomatosauce|NONE|
+|   Tuna    |NONE|
+-------------------------------------
+|   Price   | €0|
+-------------------------------------
+|Pizza  size|NONE|
+| Pepperoni |NONE|
+|  Cheese   |NONE|
+| Pineapple |NONE|
+|    Ham    |NONE|
+|Tomatosauce|NONE|
+|   Tuna    |NONE|
+-------------------------------------
+|   Price   | €0|
+-------------------------------------
+|Pizza  size|NONE|
+| Pepperoni |NONE|
+|  Cheese   |NONE|
+| Pineapple |NONE|
+|    Ham    |NONE|
+|Tomatosauce|NONE|
+|   Tuna    |NONE|
+-------------------------------------
+|   Price   | €0|
+-------------------------------------
+|Pizza  size|NONE|
+| Pepperoni |NONE|
+|  Cheese   |NONE|
+| Pineapple |NONE|
+|    Ham    |NONE|
+|Tomatosauce|NONE|
+|   Tuna    |NONE|
+-------------------------------------
+|   Price   | €0|
+-------------------------------------
+|Pizza  size|NONE|
+| Pepperoni |NONE|
+|  Cheese   |NONE|
+| Pineapple |NONE|
+|    Ham    |NONE|
+|Tomatosauce|NONE|
+|   Tuna    |NONE|
+-------------------------------------
+|   Price   | €0|
+-------------------------------------
+|Pizza  size|NONE|
+| Pepperoni |NONE|
+|  Cheese   |NONE|
+| Pineapple |NONE|
+|    Ham    |NONE|
+|Tomatosauce|NONE|
+|   Tuna    |NONE|
+-------------------------------------
+|   Price   | €0|
+-------------------------------------
+|   Total   |€29.0|

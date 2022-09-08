@@ -1,0 +1,67 @@
+//load lcd library
+#include <LiquidCrystal.h>
+
+// set crystal pins
+LiquidCrystal lcd(12, 11, 5, 4, 3, 2);
+
+const int BTN = 9;
+const int LED = 8;
+
+int stateOfButton = 1;
+
+void setup()
+{
+  Serial.begin(9600);
+  
+    
+  pinMode(BTN , INPUT);
+  pinMode(LED , OUTPUT);
+  
+  //set lcd size
+  lcd.begin(16,2);
+  
+  //set start
+  lcd.setCursor(0,0);
+  lcd.print("press button to:");
+  lcd.setCursor(0,1);
+  lcd.print("Switch light on ");
+}
+
+void loop ()
+{
+  if(digitalRead(BTN)==HIGH)          //Detection button interface to low
+  {
+    while (digitalRead(BTN)==HIGH)
+    {
+    }
+    if (stateOfButton == 0)
+    {
+    	stateOfButton = 1;
+  		Serial.println("Light has turned off");
+		digitalWrite(LED, LOW);
+      	lcd.setCursor(0,0);
+      	lcd.print("press button to:");
+      	lcd.setCursor(0,1);
+      	lcd.print("Switch light on ");
+    }
+   	else if (stateOfButton == 1)
+    {
+    	stateOfButton = 0;
+  		Serial.println("Light has turned on");
+		digitalWrite(LED, HIGH);
+      	lcd.setCursor(0,0);
+      	lcd.print("press button to:");
+      	lcd.setCursor(0,1);
+      	lcd.print("Switch light off");
+    }
+  
+  }
+
+  
+  //schrijf hier je code
+}
+
+//schrijf hier eventuele functies
+
+
+//schrijf hier eventuele functies

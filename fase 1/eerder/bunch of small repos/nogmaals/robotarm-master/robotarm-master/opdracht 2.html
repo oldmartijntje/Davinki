@@ -1,0 +1,64 @@
+<html>
+    <body>
+        <canvas id="canvas" width="800" height="600"></canvas>
+        <script src="./robot-arm.js"></script>
+        <script>
+            // Robotarm bibliotheek inladen
+            var canvas = document.getElementById("canvas");
+            var robotArm = new RobotArm(canvas);
+            
+            // Het level inladen
+            robotArm.loadLevel("exercise 2");
+            robotArm.speed = 1000;
+            
+            // Jou instructies volgen hier
+            /*for (var i = 3 - 1; i >= 0; i--) {
+                
+            
+                for (var ie = 9 - 1; ie >= 0; ie--) {
+                    robotArm.grab();
+                    color = robotArm.scan();
+                    if (color == "blue") {
+                        for (var ia = 9 - 1; ia >= 0; ia--) {
+                        robotArm.moveRight();
+                        }
+                        robotArm.drop();
+                        for (var io = 9 - 1; io >= 0; io--) {
+                        robotArm.moveLeft();
+                        }
+                    }
+                    robotArm.grab();
+                    if (color != "blue") {
+                     robotArm.moveRight();
+                    }
+                }   
+            }  */
+            robotArm.grab();
+            for (var i = 8; i >= 0; i--) {
+                robotArm.moveRight();
+            } 
+            robotArm.drop();
+            for (var i = 4; i >= 0; i--) {
+                robotArm.moveLeft();
+            }
+            robotArm.grab();
+            for (var i = 4; i >= 0; i--) {
+                robotArm.moveRight();
+            }
+            robotArm.drop();
+            for (var i = 1; i >= 0; i--) {
+                robotArm.moveLeft();
+            }
+            robotArm.grab();
+            for (var i = 1; i >= 0; i--) {
+                robotArm.moveRight();
+            }
+            robotArm.drop();
+
+            
+            
+            // De door jou opgegeven instructies uitvoeren
+            robotArm.run();
+        </script>
+    </body>
+</html>

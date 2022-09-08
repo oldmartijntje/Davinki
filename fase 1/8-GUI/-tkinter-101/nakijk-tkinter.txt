@@ -1,0 +1,87 @@
+
+ Naam van de opdracht: tkinter
+
+ Datum: 27/01/2022
+
+ Opdracht van: martijn
+
+ Nagekeken door: emiel
+
+
+
+
+
+Planning
+
+Is er een planning gemaakt (op Trelle): ja
+
+Staan er op de kaartjes uren ingeschat: ja
+
+Is de planning (goed) bijgehouden: ja
+
+Is er bij inleveren link naar planning aanwezig: ja
+
+
+
+
+
+Github
+
+Is er een REPO gemaakt voor de opdracht: ja
+
+Zijn er meerdere commints aanwezig: ja
+
+Zijn er goede beschrijvingen aanwezig bij de commints: ja
+
+Is er bij inleveren link naar REPO aanwezig: ja
+
+
+
+
+
+Opdracht
+
+Voldoet de opdracht aan de gestelde technische eisen: ja
+
+Voldoet de opdracht aan de gestelde functionele eisen: ja
+
+Is er een ZIP file ingeleverd met alle opdrachten: ja
+
+
+
+
+
+Indien de opdracht naar jouw mening niet voldaan is wat moet er dan nog aangepast worden om de opdracht succesvol af te ronden?
+
+
+
+
+
+...
+
+
+
+
+
+
+Wat zijn jouw TOPS:
+
+
+
+
+
+...
+
+
+
+
+
+
+Wat zijn jouw TIPS:
+
+
+
+
+
+...
+
