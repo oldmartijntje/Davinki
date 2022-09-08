@@ -1,0 +1,22 @@
+-------------------------------------
+|Pizza  size|NONE|
+| Pepperoni |NONE|
+|  Cheese   |NONE|
+| Pineapple |NONE|
+|    Ham    |NONE|
+|Tomatosauce|NONE|
+|   Tuna    |NONE|
+-------------------------------------
+|   Price   | €0|
+-------------------------------------
+|Pizza  size|NONE|
+| Pepperoni |NONE|
+|  Cheese   |NONE|
+| Pineapple |NONE|
+|    Ham    |NONE|
+|Tomatosauce|NONE|
+|   Tuna    |NONE|
+-------------------------------------
+|   Price   | €0|
+-------------------------------------
+|   Total   |€0|
