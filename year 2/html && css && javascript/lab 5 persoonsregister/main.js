@@ -53,7 +53,6 @@ for (let index = 0; index < list.length; index++) {
     var person = document.createElement("div");
     person.classList.add("Person");
     divList.push(person);
-    console.log(index);
     document.createElement("p");
 
     for (let indexx = 0; indexx < Object.keys(list[index]).length; indexx++) {
@@ -63,6 +62,19 @@ for (let index = 0; index < list.length; index++) {
         divList[index].appendChild(label);
         document.getElementById("meow").appendChild(divList[index]);
     }
-    console.log(divList[index]);
 }
-
+document.getElementById("show").addEventListener("click", myFunction);
+function myFunction() {
+    value = document.getElementById("value").value;
+    for (let index = 0; index < divList.length; index++) {
+        if (isNaN(value) || value == "") {
+            divList[index].style.display = ""
+        } else {
+            if (list[index].leeftijd > Number(value)) {
+                divList[index].style.display = ""
+            } else {
+                divList[index].style.display = "none"
+            }
+        }
+    }
+}
