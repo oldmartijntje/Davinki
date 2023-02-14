@@ -47,25 +47,22 @@ list = [{
     "leeftijd": 38,
     "gewicht": 65
 }];
-selected = 0;
-document.getElementById("error").hidden = true;
+divList = [];
 
-document.getElementById("show").addEventListener("click", myFunction);
+for (let index = 0; index < list.length; index++) {
+    var person = document.createElement("div");
+    person.classList.add("Person");
+    divList.push(person);
+    console.log(index);
+    document.createElement("p");
 
-function myFunction() {
-    value = document.getElementById("number").value;
-    console.log(value)
-    if (isNaN(value) || value < 0 || value > 6 || value == "") {
-        document.getElementById("error").hidden = false;
-    } else {
-        document.getElementById("error").hidden = true;
-        selected = Number(value);
-        document.getElementById('voornaam').innerHTML = list[selected]["voornaam"];
-        document.getElementById('achternaam').innerHTML = list[selected]["achternaam"];
-        document.getElementById('nationaliteit').innerHTML = list[selected]["nationaliteit"];
-        document.getElementById('leeftijd').innerHTML = list[selected]["leeftijd"];
-        document.getElementById('gewicht').innerHTML = list[selected]["gewicht"];
+    for (let indexx = 0; indexx < Object.keys(list[index]).length; indexx++) {
+        var label = document.createElement("p");
+        label.innerText = `${Object.keys(list[index])[indexx]}: ${list[index][Object.keys(list[index])[indexx]]}`;
+        label.classList.add("text");
+        divList[index].appendChild(label);
+        document.getElementById("meow").appendChild(divList[index]);
     }
-
-
+    console.log(divList[index]);
 }
+
