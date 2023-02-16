@@ -18,21 +18,32 @@
             <h1>Overzicht</h1>
         </header>
         <div class="main">
-            <div class="dropdown">
-                <button onclick="myFunction()" class="dropbtn">Genre Filter</button>
-                <div id="myDropdown" class="dropdown-content">
-                    <p class="genreFilterItem" onclick="filterThis('Action')">Action</p>
-                    <p class="genreFilterItem" onclick="filterThis('Sandbox')">Sandbox</p>
-                    <p class="genreFilterItem" onclick="filterThis('Simulation')">Simulation</p>
-                    <p class="genreFilterItem" onclick="filterThis('FPS')">FPS</p>
-                    <p class="genreFilterItem" onclick="filterThis('RPG')">RPG</p>
-                    <p class="genreFilterItem" onclick="filterThis('Looter-shooter')">Looter-shooter</p>
-                    <p class="genreFilterItem" onclick="filterThis('Sport')">Sport</p>
-                    <p class="genreFilterItem" onclick="filterThis('')">Disable Filter</p>
+            <header class="space_between">
+                <div class="dropdown">
+                    <button onclick="myFunction()" class="dropbtn">Genre Filter</button>
+                    <div id="myDropdown" class="dropdown-content">
+                        <p class="genreFilterItem" onclick="filterThis('Action')">Action</p>
+                        <p class="genreFilterItem" onclick="filterThis('Sandbox')">Sandbox</p>
+                        <p class="genreFilterItem" onclick="filterThis('Simulation')">Simulation</p>
+                        <p class="genreFilterItem" onclick="filterThis('FPS')">FPS</p>
+                        <p class="genreFilterItem" onclick="filterThis('RPG')">RPG</p>
+                        <p class="genreFilterItem" onclick="filterThis('Looter-shooter')">Looter-shooter</p>
+                        <p class="genreFilterItem" onclick="filterThis('Sport')">Sport</p>
+                        <p class="genreFilterItem" onclick="filterThis('')">Disable Filter</p>
+                    </div>
                 </div>
-            </div>
-            <div>
+
                 <input type="number" class="square" value="100"></input>
+            </header>
+            <div class="content">
+                <div class="game row">
+                    <button style="width:5%">yee</button>
+                    <div style="width:95%" class="gameInfo space_between">
+                        <p>Game 1</p>
+                        <p>Genre: Action</p>
+                        <p>Price: 100</p>
+                    </div>
+                </div>
             </div>
         </div>
         <footer class="footer">
