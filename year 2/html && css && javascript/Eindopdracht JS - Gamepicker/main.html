@@ -8,19 +8,23 @@
     <script src="main.js"></script>
     <link rel="stylesheet" href="main.css">
     <title>Document</title>
+    <script src="https://kit.fontawesome.com/ca1dbf1ecc.js" crossorigin="anonymous"></script>
 </head>
 
 <!-- Action,Sandbox,Simulation,FPS,RPG,Looter-shooter,Sport -->
 
 <body>
     <div class="container">
-        <header>
-            <h1>Overzicht</h1>
+        <header class="row">
+            <img style="margin: 20px;" class="logo" src="steam2.0.png" alt="">
+            <h1>
+                <span class="fancy-text">Pressurized water vapor.</span>
+            </h1>
         </header>
         <div class="main">
             <header class="space_between">
                 <div class="dropdown">
-                    <button onclick="myFunction()" class="dropbtn">Genre Filter</button>
+                    <button onclick="myFunction()" class="dropbtn fancy-background border">Genre Filter</button>
                     <div id="myDropdown" class="dropdown-content">
                         <p class="genreFilterItem" onclick="filterThis('Action')">Action</p>
                         <p class="genreFilterItem" onclick="filterThis('Sandbox')">Sandbox</p>
@@ -33,20 +37,21 @@
                     </div>
                 </div>
 
-                <input type="number" class="square" value="100"></input>
+                <input type="number" class="square border fancy-background" value="100"></input>
             </header>
-            <div class="content">
+            <div class="content border padding">
                 <div class="game row">
-                    <button style="width:5%">yee</button>
-                    <div style="width:95%" class="gameInfo space_between">
-                        <p>Game 1</p>
-                        <p>Genre: Action</p>
-                        <p>Price: 100</p>
+                    <button style="width:5%" class="border fancy-background">Add to cart</button>
+                    <div style="width:95%" class="gameInfo space_between border fancy-background">
+                        <p class="name margin">Game 1</p>
+                        <p class="genre margin">Genre: Action</p>
+                        <p class="rating margin">Rating: 7</p>
+                        <p class="price margin">Price: 100</p>
                     </div>
                 </div>
             </div>
         </div>
-        <footer class="footer">
+        <footer class="footer fancy-text">
             <h1>Footer</h1>
         </footer>
     </div>
