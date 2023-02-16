@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="main.css">
+    <title>Document</title>
+</head>
+
+<!-- Action,Sandbox,Simulation,FPS,RPG,Looter-shooter,Sport -->
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Overzicht</h1>
+        </header>
+        <div class="main">
+            <div class="dropdown">
+                <button onclick="myFunction()" class="dropbtn">Genre Filter</button>
+                <div id="myDropdown" class="dropdown-content">
+                    <p class="genreFilterItem" onclick="filterThis('Action')">Action</p>
+                    <p class="genreFilterItem" onclick="filterThis('Sandbox')">Sandbox</p>
+                    <p class="genreFilterItem" onclick="filterThis('Simulation')">Simulation</p>
+                    <p class="genreFilterItem" onclick="filterThis('FPS')">FPS</p>
+                    <p class="genreFilterItem" onclick="filterThis('RPG')">RPG</p>
+                    <p class="genreFilterItem" onclick="filterThis('Looter-shooter')">Looter-shooter</p>
+                    <p class="genreFilterItem" onclick="filterThis('Sport')">Sport</p>
+                    <p class="genreFilterItem" onclick="filterThis('')">Disable Filter</p>
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+            <h1>Footer</h1>
+        </footer>
+    </div>
+</body>
+
+</html>
