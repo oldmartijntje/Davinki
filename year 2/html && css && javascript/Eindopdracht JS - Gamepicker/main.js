@@ -270,3 +270,23 @@ function filterThis(filter) {
     ActiveGenreFilter = filter;
     console.log(ActiveGenreFilter)
 }
+
+const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%&?1234567890/ "
+console.log(letters.length)
+const elements = document.getElementsByClassName("magic");
+for (let i = 0; i < elements.length; i++) {
+    elements[i].addEventListener("mouseover", event => {
+        let iterations = 0;
+        const interval = setInterval(() => {
+            event.target.innerText = event.target.innerText.split("").map((letter, index) => {
+                if (index < iterations) {
+                    return event.target.dataset.value[index];
+                }
+                return letters[Math.floor(Math.random() * 44)]
+            }).join("");
+            if (iterations >= event.target.dataset.value.length) clearInterval(interval)
+            iterations += 1 / 3;
+        }, 30);
+    });
+
+}

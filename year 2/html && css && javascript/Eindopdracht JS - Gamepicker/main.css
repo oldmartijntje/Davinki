@@ -124,3 +124,11 @@ body {
 .margin {
     margin: 1rem;
 }
+
+.magic {
+    font-family: "space Mono", monospace;
+}
+
+.white-text {
+    color: white;
+}
