@@ -132,3 +132,15 @@ body {
 .white-text {
     color: white;
 }
+
+.width {
+    width: 100%;
+}
+
+.smallWidth {
+    width: 10%;
+}
+
+.quarterWidth {
+    width: 25%;
+}

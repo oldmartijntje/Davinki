@@ -268,10 +268,58 @@ window.onclick = function (event) {
 
 function filterThis(filter) {
     ActiveGenreFilter = filter;
-    console.log(ActiveGenreFilter)
+    console.log(ActiveGenreFilter);
 }
 
-const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%&?1234567890/ "
+gameList = [];
+for (let i = 0; i < games.length; i++) {
+    var gameRow = document.createElement("div");
+    gameRow.classList.add("game", "row");
+    var game = document.createElement("div");
+    game.classList.add("gameInfo", "space_between", "border", "fancy-background", "width");
+    var cartButton = document.createElement("button");
+    cartButton.dataset.value = "Add to cart";
+    cartButton.innerText = "Add to cart";
+    cartButton.classList.add("smallWidth", "border", "fancy-background", "magic");
+    cartButton.id = games[i].title;
+    var gameName = document.createElement("p");
+    var gameGenre = document.createElement("p");
+    var gameRating = document.createElement("p");
+    var gamePrice = document.createElement("p");
+    gameName.innerText = games[i].title;
+    gameName.dataset.value = gameName.innerText;
+    gameGenre.innerText = games[i].genre;
+    gameGenre.dataset.value = gameGenre.innerText;
+    gameRating.innerText = `${games[i].rating}/5`;
+    gameRating.dataset.value = gameRating.innerText;
+    if (games[i].price == 0) {
+        gamePrice.innerText = "Free";
+    } else {
+        gamePrice.innerText = "$" + games[i].price;
+    }
+    gamePrice.dataset.value = gamePrice.innerText;
+    gameName.classList.add("margin", "name", "quarterWidth", "magic");
+    gameGenre.classList.add("margin", "genre", "quarterWidth", "magic");
+    gameRating.classList.add("margin", "rating", "quarterWidth", "magic");
+    gamePrice.classList.add("margin", "price", "quarterWidth", "magic");
+    cartButton.onclick = function () {
+        console.log(this.id);
+    };
+    game.appendChild(gameName);
+    game.appendChild(gameGenre);
+    game.appendChild(gameRating);
+    game.appendChild(gamePrice);
+    gameRow.appendChild(cartButton);
+    gameRow.appendChild(game);
+    document.getElementById("gameList").appendChild(gameRow);
+}
+
+function cartGame(game) {
+
+}
+
+const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
+const ignore = ' ';
 const elements = document.getElementsByClassName("magic");
 for (let i = 0; i < elements.length; i++) {
     elements[i].addEventListener("mouseover", event => {
@@ -279,13 +327,15 @@ for (let i = 0; i < elements.length; i++) {
         const interval = setInterval(() => {
             event.target.innerText = event.target.innerText.split("").map((letter, index) => {
                 if (index < iterations) {
-                    return event.target.dataset.value[index];
+                    return event.target.dataset.value[index].toUpperCase();
                 }
-                return letters[Math.floor(Math.random() * 44)]
+                if (ignore.indexOf(event.target.dataset.value[index]) >= 0) {
+                    return event.target.dataset.value[index].toUpperCase();
+                }
+                return letters[Math.floor(Math.random() * 35)];
             }).join("");
             if (iterations >= event.target.dataset.value.length) clearInterval(interval)
             iterations += 1 / 3;
         }, 30);
     });
-
 }

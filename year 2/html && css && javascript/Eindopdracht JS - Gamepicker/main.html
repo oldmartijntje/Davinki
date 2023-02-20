@@ -24,7 +24,8 @@
         <div class="main">
             <header class="space_between">
                 <div class="dropdown">
-                    <button onclick="myFunction()" class="dropbtn fancy-background border">Genre Filter</button>
+                    <button onclick="myFunction()" class="dropbtn fancy-background border magic"
+                        data-value="Genre Filter">Genre Filter</button>
                     <div id="myDropdown" class="dropdown-content">
                         <p class="genreFilterItem magic" data-value="Action" onclick="filterThis('Action')">Action</p>
                         <p class="genreFilterItem magic" data-value="Sandbox" onclick="filterThis('Sandbox')">Sandbox
@@ -43,16 +44,7 @@
 
                 <input type="number" class="square border fancy-background" value="100"></input>
             </header>
-            <div class="content border padding">
-                <div class="game row">
-                    <button style="width:5%" class="border fancy-background">Add to cart</button>
-                    <div style="width:95%" class="gameInfo space_between border fancy-background">
-                        <p class="name margin">Game 1</p>
-                        <p class="genre margin">Genre: Action</p>
-                        <p class="rating margin">Rating: 7</p>
-                        <p class="price margin">Price: 100</p>
-                    </div>
-                </div>
+            <div class="content border padding" id="gameList">
             </div>
         </div>
         <footer class="footer fancy-text">
