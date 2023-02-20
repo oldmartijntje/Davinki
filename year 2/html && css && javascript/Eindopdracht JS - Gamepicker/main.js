@@ -198,13 +198,13 @@ var games = [
         "rating": 4
     },
     {
-        "title": "Minecraft windows 10 edition",
+        "title": "Minecraft Windows 10 edition",
         "price": 30.00,
         "genre": "Sandbox",
         "rating": 3
     },
     {
-        "title": "Minecraft Bedrock Edition",
+        "title": "Minecraft Pocket Edition",
         "price": 7.00,
         "genre": "Sandbox",
         "rating": 4
@@ -265,11 +265,6 @@ window.onclick = function (event) {
             }
         }
     }
-}
-
-function filterThis(filter) {
-    ActiveGenreFilter = filter;
-    console.log(ActiveGenreFilter);
 }
 
 gameList = [];
