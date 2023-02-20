@@ -144,3 +144,25 @@ body {
 .quarterWidth {
     width: 25%;
 }
+
+.noverflow {
+    overflow: hidden;
+    max-height: 57px;
+}
+
+.smallestWidth {
+    width: 5%;
+}
+
+.scroll {
+    overflow-y: scroll;
+    max-height: 100vh;
+}
+
+.bigWidth {
+    width: 75%;
+}
+
+.mediumWidth {
+    width: 20%;
+}

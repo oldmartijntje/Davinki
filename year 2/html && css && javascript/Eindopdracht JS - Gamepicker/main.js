@@ -189,55 +189,55 @@ var games = [
         "title": "Muck",
         "price": 0.00,
         "genre": "Action",
-        "rating": 6
+        "rating": 3
     },
     {
         "title": "Minecraft Java Edition",
         "price": 25.00,
         "genre": "Sandbox",
-        "rating": 8
+        "rating": 4
     },
     {
         "title": "Minecraft windows 10 edition",
         "price": 30.00,
         "genre": "Sandbox",
-        "rating": 7
+        "rating": 3
     },
     {
         "title": "Minecraft Bedrock Edition",
         "price": 7.00,
         "genre": "Sandbox",
-        "rating": 8
+        "rating": 4
     },
     {
         "title": "Crush Crush",
         "price": 0.00,
         "genre": "Simulation",
-        "rating": 6
+        "rating": 3
     },
     {
         "title": "Fortnite",
         "price": 0.00,
         "genre": "Action",
-        "rating": 6
+        "rating": 3
     },
     {
         "title": "Among us",
         "price": 9.00,
         "genre": "Action",
-        "rating": 7
+        "rating": 3
     },
     {
         "title": "Subway Surfers",
         "price": 0.00,
         "genre": "Simulation",
-        "rating": 5
+        "rating": 2
     },
     {
         "title": "Roblox",
         "price": 0.00,
         "genre": "Action,Sandbox,Simulation,FPS,RPG,Looter-shooter,Sport",
-        "rating": 7
+        "rating": 4
     },
     {
         "title": "DayZ",
@@ -247,6 +247,7 @@ var games = [
     }
 ]
 ActiveGenreFilter = '';
+var cart = [];
 
 function myFunction() {
     document.getElementById("myDropdown").classList.toggle("show");
@@ -275,8 +276,9 @@ gameList = [];
 for (let i = 0; i < games.length; i++) {
     var gameRow = document.createElement("div");
     gameRow.classList.add("game", "row");
+    gameRow.classList.add("noverflow")
     var game = document.createElement("div");
-    game.classList.add("gameInfo", "space_between", "border", "fancy-background", "width");
+    game.classList.add("gameInfo", "border", "fancy-background", "width", "noverflow", "row");
     var cartButton = document.createElement("button");
     cartButton.dataset.value = "Add to cart";
     cartButton.innerText = "Add to cart";
@@ -289,21 +291,24 @@ for (let i = 0; i < games.length; i++) {
     gameName.innerText = games[i].title;
     gameName.dataset.value = gameName.innerText;
     gameGenre.innerText = games[i].genre;
-    gameGenre.dataset.value = gameGenre.innerText;
     gameRating.innerText = `${games[i].rating}/5`;
     gameRating.dataset.value = gameRating.innerText;
+    if ((games[i].genre.match(/,/g) || []).length == 6) {
+        gameGenre.innerText = "All";
+    }
+    gameGenre.dataset.value = gameGenre.innerText;
     if (games[i].price == 0) {
         gamePrice.innerText = "Free";
     } else {
         gamePrice.innerText = "$" + games[i].price;
     }
     gamePrice.dataset.value = gamePrice.innerText;
-    gameName.classList.add("margin", "name", "quarterWidth", "magic");
-    gameGenre.classList.add("margin", "genre", "quarterWidth", "magic");
-    gameRating.classList.add("margin", "rating", "quarterWidth", "magic");
-    gamePrice.classList.add("margin", "price", "quarterWidth", "magic");
+    gameName.classList.add("margin", "name", "bigWidth", "magic", "noverflow");
+    gameGenre.classList.add("margin", "genre", "mediumWidth", "magic", "noverflow");
+    gameRating.classList.add("margin", "rating", "smallestWidth", "magic", "noverflow");
+    gamePrice.classList.add("margin", "price", "smallWidth", "magic", "noverflow");
     cartButton.onclick = function () {
-        console.log(this.id);
+        gameToCart(this.id);
     };
     game.appendChild(gameName);
     game.appendChild(gameGenre);
@@ -314,9 +319,24 @@ for (let i = 0; i < games.length; i++) {
     document.getElementById("gameList").appendChild(gameRow);
 }
 
-function cartGame(game) {
-
+function gameToCart(game) {
+    if (cart.includes(game)) {
+        console.log("Game already in cart");
+    } else {
+        cart.push(game);
+        console.log(cart);
+    }
 }
+
+function gameFromCart(game) {
+    if (cart.includes(game)) {
+        cart.splice(cart.indexOf(game), 1);
+        console.log(cart);
+    } else {
+        console.log("Game not in cart");
+    }
+}
+
 
 const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
 const ignore = ' ';
