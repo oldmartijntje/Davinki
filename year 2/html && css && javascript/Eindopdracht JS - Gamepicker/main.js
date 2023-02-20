@@ -272,9 +272,7 @@ function filterThis(filter) {
 }
 
 const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%&?1234567890/ "
-console.log(letters.length)
 const elements = document.getElementsByClassName("magic");
-console.log(elements.length)
 for (let i = 0; i < elements.length; i++) {
     elements[i].addEventListener("mouseover", event => {
         let iterations = 0;

@@ -26,14 +26,18 @@
                 <div class="dropdown">
                     <button onclick="myFunction()" class="dropbtn fancy-background border">Genre Filter</button>
                     <div id="myDropdown" class="dropdown-content">
-                        <p class="genreFilterItem" onclick="filterThis('Action')">Action</p>
-                        <p class="genreFilterItem" onclick="filterThis('Sandbox')">Sandbox</p>
-                        <p class="genreFilterItem" onclick="filterThis('Simulation')">Simulation</p>
-                        <p class="genreFilterItem" onclick="filterThis('FPS')">FPS</p>
-                        <p class="genreFilterItem" onclick="filterThis('RPG')">RPG</p>
-                        <p class="genreFilterItem" onclick="filterThis('Looter-shooter')">Looter-shooter</p>
-                        <p class="genreFilterItem" onclick="filterThis('Sport')">Sport</p>
-                        <p class="genreFilterItem" onclick="filterThis('')">Disable Filter</p>
+                        <p class="genreFilterItem magic" data-value="Action" onclick="filterThis('Action')">Action</p>
+                        <p class="genreFilterItem magic" data-value="Sandbox" onclick="filterThis('Sandbox')">Sandbox
+                        </p>
+                        <p class="genreFilterItem magic" data-value="Simulation" onclick="filterThis('Simulation')">
+                            Simulation</p>
+                        <p class="genreFilterItem magic" data-value="FPS" onclick="filterThis('FPS')">FPS</p>
+                        <p class="genreFilterItem magic" data-value="RPG" onclick="filterThis('RPG')">RPG</p>
+                        <p class="genreFilterItem magic" data-value="Looter-shooter"
+                            onclick="filterThis('Looter-shooter')">Looter-shooter</p>
+                        <p class="genreFilterItem magic" data-value="Sport" onclick="filterThis('Sport')">Sport</p>
+                        <p class="genreFilterItem magic" data-value="Disable Filter" onclick="filterThis('')">Disable
+                            Filter</p>
                     </div>
                 </div>
 
