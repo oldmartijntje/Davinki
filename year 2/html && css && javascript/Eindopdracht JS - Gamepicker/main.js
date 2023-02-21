@@ -135,7 +135,7 @@ var games = [
         "title": "Terraria",
         "price": 9.99,
         "genre": "Sandbox",
-        "rating": 2
+        "rating": 5
     },
     {
         "title": "Stardew Valley",
@@ -216,6 +216,12 @@ var games = [
         "rating": 3
     },
     {
+        "title": "Crush Crush DLC",
+        "price": 5.69,
+        "genre": "Simulation",
+        "rating": 5
+    },
+    {
         "title": "Fortnite",
         "price": 0.00,
         "genre": "Action",
@@ -246,11 +252,15 @@ var games = [
         "rating": 3
     }
 ]
+page = 0;
 ActiveGenreFilter = '';
+ActiveCostFilter = 100;
+activeToast = 0;
 var cart = [];
+var snackbarMessage = [];
 
 function myFunction() {
-    document.getElementById("myDropdown").classList.toggle("show");
+    document.getElementById("myDropdown").classList.toggle("showItemsFromDropdown");
 }
 
 // Close the dropdown if the user clicks outside of it
@@ -260,14 +270,13 @@ window.onclick = function (event) {
         var i;
         for (i = 0; i < dropdowns.length; i++) {
             var openDropdown = dropdowns[i];
-            if (openDropdown.classList.contains('show')) {
-                openDropdown.classList.remove('show');
+            if (openDropdown.classList.contains('showItemsFromDropdown')) {
+                openDropdown.classList.remove('showItemsFromDropdown');
             }
         }
     }
 }
 
-gameList = [];
 for (let i = 0; i < games.length; i++) {
     var gameRow = document.createElement("div");
     gameRow.classList.add("game", "row");
@@ -295,7 +304,7 @@ for (let i = 0; i < games.length; i++) {
     if (games[i].price == 0) {
         gamePrice.innerText = "Free";
     } else {
-        gamePrice.innerText = "$" + games[i].price;
+        gamePrice.innerText = "€" + games[i].price;
     }
     gamePrice.dataset.value = gamePrice.innerText;
     gameName.classList.add("margin", "name", "bigWidth", "magic", "noverflow");
@@ -313,28 +322,67 @@ for (let i = 0; i < games.length; i++) {
     gameRow.appendChild(game);
     document.getElementById("gameList").appendChild(gameRow);
 }
+document.getElementById("gameListCartPage").innerHTML = document.getElementById("gameList").innerHTML;
+
+for (let i = 0; i < games.length; i++) {
+    document.getElementById("gameListCartPage").children[i].children[0].onclick = function () {
+        gameFromCart(this.id);
+    }
+    document.getElementById("gameListCartPage").children[i].children[0].innerText = "Remove from cart";
+    document.getElementById("gameListCartPage").children[i].children[0].dataset.value = "Remove from cart";
+}
 
 function gameToCart(game) {
     if (cart.includes(game)) {
         console.log("Game already in cart");
+        snackbar("Game already in cart")
     } else {
         cart.push(game);
         console.log(cart);
+        snackbar(`Added ${game} to cart`)
     }
+    showGamesInCart();
+}
+
+function snackbar(message) {
+    snackbarMessage.push(message);
+    var x = document.getElementById("snackbar");
+    var messageToShow = getToastMessage();
+    x.className = "show";
+    x.innerText = messageToShow;
+    activeToast += 1;
+    setTimeout(function () {
+        activeToast -= 1;
+        if (activeToast == 0) {
+            x.className = x.className.replace("show", "");
+        }
+        snackbarMessage.shift();
+        x.innerText = getToastMessage();
+    }, 5000);
+}
+
+function getToastMessage() {
+    var message = snackbarMessage[0];
+    for (let index = 0; index < snackbarMessage.length - 1; index++) {
+        message = `${message}\n${snackbarMessage[index + 1]}`;
+    }
+    return message;
 }
 
 function gameFromCart(game) {
     if (cart.includes(game)) {
         cart.splice(cart.indexOf(game), 1);
         console.log(cart);
+        snackbar(`Removed ${game} from cart`)
     } else {
         console.log("Game not in cart");
+        snackbar("Game not in cart")
     }
+    showGamesInCart();
 }
 
-
 const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
-const ignore = ' ';
+const ignore = ' .\n\r';
 const elements = document.getElementsByClassName("magic");
 for (let i = 0; i < elements.length; i++) {
     elements[i].addEventListener("mouseover", event => {
@@ -347,10 +395,71 @@ for (let i = 0; i < elements.length; i++) {
                 if (ignore.indexOf(event.target.dataset.value[index]) >= 0) {
                     return event.target.dataset.value[index].toUpperCase();
                 }
-                return letters[Math.floor(Math.random() * 35)];
+                return letters[Math.floor(Math.random() * letters.length)];
             }).join("");
             if (iterations >= event.target.dataset.value.length) clearInterval(interval)
-            iterations += 1 / 3;
+            iterations += 1 / 6 * event.target.dataset.value.length / 15;
         }, 30);
     });
 }
+
+function filterThis(filter = false) {
+    console.log(filter)
+    if ((filter != false && isNaN(filter)) || filter == '') {
+        ActiveGenreFilter = filter;
+    } else if (!isNaN(filter)) {
+        ActiveCostFilter = filter;
+    }
+    if (ActiveGenreFilter != '' && isNaN(ActiveGenreFilter)) {
+        for (let i = 0; i < document.getElementById("gameList").children.length; i++) {
+            if (games[i].genre.includes(ActiveGenreFilter) && games[i].price <= ActiveCostFilter) {
+                document.getElementById("gameList").children[i].style.display = "";
+            } else {
+                document.getElementById("gameList").children[i].style.display = "none";
+            }
+        }
+    } else {
+        for (let i = 0; i < document.getElementById("gameList").children.length; i++) {
+            if (games[i].price <= ActiveCostFilter) {
+                document.getElementById("gameList").children[i].style.display = "";
+            } else {
+                document.getElementById("gameList").children[i].style.display = "none";
+            }
+        }
+    }
+}
+
+function showGamesInCart() {
+    for (let i = 0; i < document.getElementById("gameListCartPage").children.length; i++) {
+        if (cart.includes(games[i].title)) {
+            document.getElementById("gameListCartPage").children[i].style.display = "";
+        } else {
+            document.getElementById("gameListCartPage").children[i].style.display = "none";
+        }
+    }
+    calculatePrice();
+}
+
+function changePage(pageToShow) {
+    page = pageToShow;
+    if (page == 0) {
+        document.getElementById("mainPage").style.display = "";
+        document.getElementById("ShoppingCartPage").style.display = "none";
+    } else if (page == 1) {
+        document.getElementById("mainPage").style.display = "none";
+        document.getElementById("ShoppingCartPage").style.display = "";
+    }
+}
+
+function calculatePrice() {
+    let price = 0;
+    for (let i = 0; i < cart.length; i++) {
+        price += games.find(game => game.title == cart[i]).price;
+    }
+    price = Math.floor(price * 100) / 100;
+    document.getElementById("displayCartAmount").innerText = `Total: €${price}`;
+    document.getElementById("displayCartAmount").dataset.value = `Total: €${price}`;
+}
+
+showGamesInCart();
+changePage(0);
