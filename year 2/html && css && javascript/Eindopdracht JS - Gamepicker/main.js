@@ -1,3 +1,4 @@
+//This is redundant as fuck
 var games = [
     {
         "title": "Counter-Strike: Global Offensive",
