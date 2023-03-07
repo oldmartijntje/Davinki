@@ -24,7 +24,7 @@
         <div class="main">
             <header class="space_between">
                 <div class="dropdown">
-                    <button onclick="myFunction()" class="dropbtn fancy-background border magic"
+                    <button onclick="genreFilter()" class="dropbtn fancy-background border magic"
                         data-value="Genre Filter">Genre Filter</button>
                     <div id="myDropdown" class="dropdown-content">
                         <p class="genreFilterItem magic" data-value="Action" onclick="filterThis('Action')">Action</p>
@@ -41,10 +41,27 @@
                             Filter</p>
                     </div>
                 </div>
+                <div class="dropdown">
+                    <button onclick="ratingFilter()" class="dropbtn fancy-background border magic"
+                        data-value="Rating Filter">Rating Filter</button>
+                    <div id="myDropdown2" class="dropdown-content">
+                        <p class="genreFilterItem magic" data-value="Disable" onclick="filterThis('0')">Disable</p>
+                        <p class="genreFilterItem magic" data-value="Rating 1/5" onclick="filterThis('1')">Rating 1/5
+                        </p>
+                        <p class="genreFilterItem magic" data-value="Rating 2/5" onclick="filterThis('2')">Rating 2/5
+                        </p>
+                        <p class="genreFilterItem magic" data-value="Rating 3/5" onclick="filterThis('3')">
+                            Rating 3/5</p>
+                        <p class="genreFilterItem magic" data-value="Rating 4/5" onclick="filterThis('4')">Rating 4/5
+                        </p>
+                        <p class="genreFilterItem magic" data-value="Rating 5/5" onclick="filterThis('5')">Rating 5/5
+                        </p>
+                    </div>
+                </div>
                 <button data-value="To Cart" class="border magic fancy-background" onclick="changePage(1)">To
                     Cart</button>
                 <input type="number" class="square border fancy-background" value="100"
-                    onchange="filterThis(value)"></input>
+                    onchange="filterThis(Number(value))"></input>
             </header>
             <div class="content border padding" id="gameList"></div>
         </div>

@@ -256,12 +256,17 @@ var games = [
 page = 0;
 ActiveGenreFilter = '';
 ActiveCostFilter = 100;
+ActiveRatingFilter = 0;
 activeToast = 0;
 var cart = [];
 var snackbarMessage = [];
 
-function myFunction() {
+function genreFilter() {
     document.getElementById("myDropdown").classList.toggle("showItemsFromDropdown");
+}
+
+function ratingFilter() {
+    document.getElementById("myDropdown2").classList.toggle("showItemsFromDropdown");
 }
 
 // Close the dropdown if the user clicks outside of it
@@ -408,12 +413,14 @@ function filterThis(filter = false) {
     console.log(filter)
     if ((filter != false && isNaN(filter)) || filter == '') {
         ActiveGenreFilter = filter;
-    } else if (!isNaN(filter)) {
+    } else if (!isNaN(filter) && typeof filter == 'number') {
         ActiveCostFilter = filter;
+    } else if (!isNaN(filter) && typeof filter == 'string') {
+        ActiveRatingFilter = Number(filter);
     }
     if (ActiveGenreFilter != '' && isNaN(ActiveGenreFilter)) {
         for (let i = 0; i < document.getElementById("gameList").children.length; i++) {
-            if (games[i].genre.includes(ActiveGenreFilter) && games[i].price <= ActiveCostFilter) {
+            if (games[i].genre.includes(ActiveGenreFilter) && games[i].price <= ActiveCostFilter && (games[i].rating == ActiveRatingFilter || ActiveRatingFilter == 0)) {
                 document.getElementById("gameList").children[i].style.display = "";
             } else {
                 document.getElementById("gameList").children[i].style.display = "none";
@@ -421,7 +428,7 @@ function filterThis(filter = false) {
         }
     } else {
         for (let i = 0; i < document.getElementById("gameList").children.length; i++) {
-            if (games[i].price <= ActiveCostFilter) {
+            if (games[i].price <= ActiveCostFilter && games[i].rating == ActiveRatingFilter || ActiveRatingFilter == 0) {
                 document.getElementById("gameList").children[i].style.display = "";
             } else {
                 document.getElementById("gameList").children[i].style.display = "none";
