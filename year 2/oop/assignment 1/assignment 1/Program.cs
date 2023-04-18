@@ -37,7 +37,33 @@ public class Pokemon
 
     public void BattleCry()
     {
-        Console.WriteLine(Name + "!");
+        Console.WriteLine(Nickname + ": Rawr!");
+    }
+
+    public Pokeball ReturnPokemon()
+    {
+        Console.WriteLine(Nickname + ", Come back!");
+        return new Pokeball(new Pokemon(Name, Nickname, Type, Weakness, Item, HP, MaxHP, Level, ExperiencePoints));
+    }
+}
+
+public class Pokeball
+{
+    public string TypePokeball { get; }
+    public Pokemon Pokemon { get; }
+    // no moves yet
+
+    public Pokeball(Pokemon pokemon, string typePokeball = "Pokeball")
+    {
+        Pokemon = pokemon;
+        TypePokeball = typePokeball;
+    }
+
+    public Pokemon SelectPokemon()
+    {
+        Console.WriteLine(Pokemon.Nickname + ", I choose you!");
+        Pokemon.BattleCry();
+        return Pokemon;
     }
 }
 
@@ -49,10 +75,13 @@ public class Program
         Console.WriteLine("Enter a name for your Charmander:");
         string name = Console.ReadLine();
         Charmander charmander = new Charmander(name, 5);
+        Pokeball pokeball = new Pokeball(charmander);
 
         for (int i = 0; i < 10; i++)
         {
-            charmander.BattleCry();
+            Pokemon selected = pokeball.SelectPokemon();
+            Pokeball newPokeball = selected.ReturnPokemon();
+            pokeball = newPokeball;
         }
         Console.ReadLine();
 
