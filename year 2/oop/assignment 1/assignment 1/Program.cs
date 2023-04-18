@@ -1,14 +1,38 @@
 ﻿using System;
 
-public class Charmander
+public class Charmander : Pokemon
+{
+    static int hpPerLevel = 15;
+    public Charmander(string nickname, int level) : base("Charmander", nickname, "Fire", "Water", null, hpPerLevel * level, hpPerLevel * level, level, 0)
+    {
+        
+    }
+}
+
+public class Pokemon
 {
     public string Name { get; }
-    public string Strength { get; } = "Fire";
-    public string Weakness { get; } = "Water";
+    public string Nickname { get; }
+    public string Type { get; }
+    public string Weakness { get; }
+    public string? Item { get; }
+    public int HP { get; }
+    public int MaxHP { get; }
+    public int Level { get; }
+    public int ExperiencePoints { get; }
+    // no moves yet
 
-    public Charmander(string name)
+    public Pokemon(string name, string nickname, string type, string weakness, string item, int hp, int maxHP, int level, int experiencePoints)
     {
-        Name = name;
+        Name=name;
+        Nickname=nickname;
+        Type=type;
+        Weakness=weakness;
+        Item=item;
+        HP=hp;
+        MaxHP=maxHP;
+        Level=level;
+        ExperiencePoints=experiencePoints;
     }
 
     public void BattleCry()
@@ -21,44 +45,16 @@ public class Program
 {
     static void Main()
     {
-        bool quit = false;
 
-        while (!quit)
+        Console.WriteLine("Enter a name for your Charmander:");
+        string name = Console.ReadLine();
+        Charmander charmander = new Charmander(name, 5);
+
+        for (int i = 0; i < 10; i++)
         {
-            Console.WriteLine("Enter a name for your Charmander:");
-            string name = Console.ReadLine();
-            Charmander charmander = new Charmander(name);
-
-            for (int i = 0; i < 10; i++)
-            {
-                charmander.BattleCry();
-            }
-
-            Console.WriteLine("Do you want to rename your Charmander? (Y/N)");
-            string response = Console.ReadLine();
-
-            while (response.ToLower() == "y")
-            {
-                Console.WriteLine("Enter a new name for your Charmander:");
-                name = Console.ReadLine();
-                charmander = new Charmander(name);
-
-                for (int i = 0; i < 10; i++)
-                {
-                    charmander.BattleCry();
-                }
-
-                Console.WriteLine("Do you want to rename your Charmander again? (Y/N)");
-                response = Console.ReadLine();
-            }
-
-            Console.WriteLine("Do you want to quit the game? (Y/N)");
-            response = Console.ReadLine();
-
-            if (response.ToLower() == "y")
-            {
-                quit = true;
-            }
+            charmander.BattleCry();
         }
+        Console.ReadLine();
+
     }
 }
